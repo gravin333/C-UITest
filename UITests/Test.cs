@@ -11,8 +11,9 @@ namespace UITests
         static void Main(string[] args)
         {
             string path = System.IO.Path.GetFullPath(@"..\..\..\");
+            path += @"\Resources\Browsers";
             // Initialize the Chrome DriverC:\Users\php\source\repos\UITests\UITests\Resources\
-            using (var driver = new ChromeDriver(path+@"\Resources"))
+            using (var driver = new ChromeDriver(path))
             {
                 // Go to the home page
                 driver.Navigate().GoToUrl("http://testing-ground.scraping.pro/login");
